@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #e0e0e0;
+    border-bottom: 1px solid #ccc;
+}
+
+.user-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.container {
+    display: flex;
+    margin-top: 15px;
+    margin-left: 15px;
+    height: calc(100vh - 60px);
+}
+
+.sidebar {
+    width: 280px;
+    background-color: #f8f8f8;
+    border-right: 1px solid #ccc;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.controls .control-button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+.controls .control-button:hover {
+    background-color: #ccc;
+}
+
+#calendar {
+    margin-bottom: 20px;
+}
+
+.incomplete-label {
+    font-size: 14px;
+}
+
+.main-content {
+    margin-left: 30px;
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.task-date {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sort-control {
+    font-size: 14px;
+}
+
+#tasks-list {
+    list-style-type: none;
+}
+
+#tasks-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#tasks-list li:hover {
+    background-color: #e7e7e7;
+}
+
+#task-modal {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 16px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: left;
+}
+
+.task-header-modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.status-icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35px;
+}
+
+.task-date-time {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #888;
+    text-align: center;
+}
+
+.status-icon {
+    position: relative;
+    width: 35px;
+    height: 35px;
+}
+
+.status-icon img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 35px;
+}
+
+#task-details{
+    width: auto;
+}
+
+#task-details h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#task-details p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+#close-task-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#close-task-btn:hover {
+    background-color: #ccc;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.task-info {
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.task-meta {
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.task-meta span {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.checkbox-wrapper {
+    position: relative;
+    width: 35px;
+    height: 35px;
+}
+
+.checkbox-background, .checkbox-foreground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 35px;
+}
+
+.no-titlebar .ui-dialog-titlebar {
+    display: none; /* Скрыть заголовок */
+}
+
+.ui-dialog-buttonpane {
+    display: none !important; /* Скрыть нижнюю панель с кнопками в диалоговом окне */
+}
+
+.date-bottom{
+    border-bottom: 1px solid grey;
+}
+
+.date-span-list{
+    margin-top: 10px;
+}

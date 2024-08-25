@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="user-icon">
+            <img src="./img/Vector.svg" alt="User Icon">
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Поиск...">
+            </div>
+            <div class="controls">
+                <button id="today-btn" class="control-button">Сегодня</button>
+                <button id="week-btn" class="control-button">На неделю</button>
+                <div id="calendar"></div>
+                <label for="incomplete-checkbox" class="incomplete-label">
+                    <input type="checkbox" id="incomplete-checkbox"> Только невыполненные
+                </label>
+            </div>
+        </aside>
+        <main class="main-content">
+            <div class="task-header">
+                <div class="task-date">8 мая 2022</div>
+                <div class="sort-control">
+                    <label for="sort-checkbox">
+                        <input type="checkbox" id="sort-checkbox"> Сортировать по дате
+                    </label>
+                </div>
+            </div>
+            <ul id="tasks-list">
+                <!--здесь  будут динамически добавляться задачи  -->
+            </ul>
+        </main>
+    </div>
+
+    <div id="task-modal">
+        <div id="task-details">
+            <div class="task-header-modal">
+                <h2>Название</h2>
+                <div class="status-icon-wrapper">
+                    <div class="status-icon">
+                        <img src="images/Vector-background.svg" class="checkbox-background" alt="Background Icon">
+                        <img src="images/Vector-foreground.svg" class="checkbox-foreground" alt="Foreground Icon">
+                    </div>
+                </div>
+            </div>
+            <p><strong>Дата:</strong> 08.05.2022 00:10</p>
+            <p><strong>Полное описание</strong></p>
+        </div>
+        <button id="close-task-btn">Готово</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
